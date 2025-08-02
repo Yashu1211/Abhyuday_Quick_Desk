@@ -8,6 +8,7 @@ import javax.servlet.ServletContextListener;
 import javax.servlet.annotation.WebListener;
 
 import models.Role;
+import models.Category;
 import utils.DBConnect;
 
 @WebListener
@@ -20,8 +21,10 @@ public class AppListener implements ServletContextListener {
         DBConnect.dbPassword = context.getInitParameter("dbpassword");
 
         List<Role> roles = Role. getAllRoles(); 
-        // System.out.println(cities);
         context.setAttribute("roles", roles);
+
+        List<Category> categoryList = Category.getAllCategories(); 
+        context.setAttribute("categories", categoryList);
 
         
     }

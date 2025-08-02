@@ -137,3 +137,8 @@ INSERT INTO ticket_statuses (status_name) VALUES ('OPEN'), ('IN_PROGRESS'), ('RE
 //Vote Types
 INSERT INTO vote_types (vote_name) VALUES ('UPVOTE'), ('DOWNVOTE');
 
+INSERT INTO categories (name, description)
+VALUES ('Technical', 'Technical issues'),
+       ('Billing', 'Billing related issues'),
+       ('General', 'General queries');
+
